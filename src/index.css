@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.btn-primary {
+  @apply w-[100%] py-[8px] px-[14px] border rounded-md text-white bg-primary;
+}
+.error {
+  @apply text-red text-sm w-[100%];
+}
+
+h3 {
+  @apply font-semibold text-xl;
+}
+h4 {
+  @apply font-semibold text-lg;
+}
+.inventory-items {
+  @apply flex justify-between flex-wrap;
+}
+.table-col{
+  @apply py-4 px-2 w-[15%]
+}
+.table-row {
+  @apply border-b  cursor-pointer dark:border-none dark:text-white odd:bg-[#FFFFFF14] flex justify-between w-[100%] 
+}
