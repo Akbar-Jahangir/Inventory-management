@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Input } from "./Input/Input";
+import { Input } from "./Input/input";
 import Button from "./Button/Button";
-import { GoogleSvg, LogoSvg } from "./IconsSvgs";
+import { LogoSvg } from "./IconsSvgs";
 import { useNavigate } from "react-router";
-import { createUser } from "../store/AuthSlice/signUpSlice/signUpSlice";
+import { createUser } from "../store/AuthSlice/SignUpSlice/signUpSlice";
 import { uid } from "uid";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -129,14 +129,14 @@ const Signup: React.FC = () => {
           )}
 
           <Button type="submit" label="Get started" btnClass=" w-[100%] py-[8px] px-[14px] border rounded-md text-white bg-primary border-none" />
-         
+
 
           <p className="text-center py-4">
             Already have an account?{" "}
             <NavLink to={'/inventory'}>
-            <span className="text-[#0F50AA] font-semibold">Log in</span>
+              <span className="text-[#0F50AA] font-semibold">Log in</span>
             </NavLink>
-           
+
           </p>
         </form>
       </div>

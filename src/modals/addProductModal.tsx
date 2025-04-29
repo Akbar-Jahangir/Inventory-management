@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { InputField } from "../components/Input/Input";
+import { InputField } from "../components/Input/input";
 import { DropdownField } from "../components/DropDownField/DropdownInput";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../store/productSlice/productSlice";
+import { addProduct } from "../store/ProductSlice/productSlice";
 import { uid } from "uid";
 import Button from "../components/Button/Button";
 import useVendor from "../hooks/useVendor";
@@ -44,7 +44,7 @@ const AddProduct: React.FC<AddProductProps> = ({ closeModal }) => {
 
     // Add validation to ensure all required fields are filled
     if (!formData.productName || !formData.category || !formData.buyingPrice) {
-    alert("Please fill out all required fields.");
+      alert("Please fill out all required fields.");
       return;
     }
 

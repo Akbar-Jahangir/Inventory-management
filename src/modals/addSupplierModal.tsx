@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { InputField } from "../components/Input/Input";
+import { InputField } from "../components/Input/input";
 import { DropdownField } from "../components/DropDownField/DropdownInput";
 import { useDispatch } from "react-redux";
 import { uid } from "uid";
-import { addVendor } from "../store/vendorSlice/vendorSlice";
+import { addVendor } from "../store/VendorSlice/vendorSlice";
 import Button from "../components/Button/Button";
 
 interface AddProductProps {
@@ -114,11 +114,11 @@ const AddVendor: React.FC<AddProductProps> = ({ closeModal }) => {
             <Button
               type="submit"
               label="Add Supplier"
-            
+
               btnClass="w-[110px] h-[39px] text-sm rounded border bg-primary text-white"
             />
 
-            
+
           </div>
         </form>
       </div>

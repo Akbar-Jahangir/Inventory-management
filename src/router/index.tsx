@@ -1,10 +1,10 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import DisplayPage from "../layout/displayLayout";
-import Layout from "../layout/appInsideLayout";
-import InventoryPage from "../pages/inventoryPage";
-import ProductDetail from "../pages/productDetail";
-import ErrorPage from "../pages/errorPage";
-import Vendors from "../pages/vendorsPage";
+import DisplayPage from "../layout/DisplayLayout";
+import Layout from "../layout/AppInsideLayout";
+import InventoryPage from "../pages/InventoryPage";
+import ProductDetail from "../pages/ProductDetail";
+import ErrorPage from "../pages/ErrorPage";
+import Vendors from "../pages/VendorsPage";
 
 function HomeRouter() {
   return (

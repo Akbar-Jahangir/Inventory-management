@@ -4,7 +4,7 @@ import useProduct from "../hooks/useProduct";
 import { Product } from "../interfaces/product";
 import OverAllInventory from "../components/InventorySummary/OverAllInventory";
 import { useDispatch } from "react-redux";
-import { deleteProduct } from "../store/deleteProductSlice/deleteProductSlice";
+import { deleteProduct } from "../store/DeleteProductSlice/deleteProductSlice";
 import { useNavigate } from "react-router";
 
 function InventoryPage() {
@@ -23,7 +23,7 @@ function InventoryPage() {
   };
 
   const renderRow = (product: Product) => (
-    <tr key={product.productId}  className="table-row" onClick={() =>
+    <tr key={product.productId} className="table-row" onClick={() =>
       handleRowClick(
         product?.["productId"]
       )
@@ -35,13 +35,12 @@ function InventoryPage() {
       <td className="table-col">{product.expiryDate}</td>
       <td className="table-col">
         <span
-          className={`py-1 text-xs ${
-            product.availability === "In- stock"
-              ? "text-success"
-              : product.availability === "Out of stock"
+          className={`py-1 text-xs ${product.availability === "In- stock"
+            ? "text-success"
+            : product.availability === "Out of stock"
               ? "text-[#DA3E33]"
               : "text-warning"
-          }`}
+            }`}
         >
           {product.availability}
         </span>
@@ -74,7 +73,7 @@ function InventoryPage() {
             tableData={products.map((product) => renderRow(product))}
             tableModal='AddProduct'
             tableFilter='InventoriesFilter'
-            
+
           />
         </div>
       </div>

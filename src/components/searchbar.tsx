@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { SearchSvg } from "./IconsSvgs";
-import { searchItem } from "../store/productSearchSlice/productSearchSlice";
+import { searchItem } from "../store/ProductSearchSlice/productSearchSlice";
 
 export const Searchbar: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");

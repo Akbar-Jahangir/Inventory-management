@@ -6,7 +6,7 @@ import { Product } from "../interfaces/product";
 import useVendors from "../hooks/useVendor";
 import { Vendor } from "../interfaces/vendor";
 import { useState } from "react";
-import EditProduct from "../modals/editProductModal";
+import EditProduct from "../modals/EditProductModal";
 import Button from "../components/Button/Button";
 
 const ProductDetail: React.FC = () => {

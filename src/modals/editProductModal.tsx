@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { InputField } from "../components/Input/Input";
+import { InputField } from "../components/Input/input";
 import { DropdownField } from "../components/DropDownField/DropdownInput";
 import { useDispatch } from "react-redux";
-import { addProduct  } from "../store/productSlice/productSlice";
-import {Product} from '../interfaces/product'
+import { addProduct } from "../store/ProductSlice/productSlice";
+import { Product } from '../interfaces/product'
 import useVendors from "../hooks/useVendor";
 import Button from "../components/Button/Button";
 
@@ -144,9 +144,9 @@ const EditProduct: React.FC<EditProductProps> = ({
               onclick={closeModal}
               btnClass="w-[110px] h-[39px] text-sm rounded dark:text-white border dark:border-white "
             />
-           
+
             <Button
-               type="submit"
+              type="submit"
               label="Edit Product"
               onclick={closeModal}
               btnClass="w-[110px] h-[39px] text-sm rounded border bg-primary text-white"

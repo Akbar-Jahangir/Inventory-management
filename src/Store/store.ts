@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import addProductReducer from "./productSlice/productSlice";
-import searchProductReducer from "./productSearchSlice/productSearchSlice";
-import addVendorReducer from "./vendorSlice/vendorSlice";
-import deleteProductReducer from "./deleteProductSlice/deleteProductSlice";
-import signUpReducer from "./AuthSlice/signUpSlice/signUpSlice"
+import addProductReducer from "./ProductSlice/productSlice";
+import searchProductReducer from "./ProductSearchSlice/productSearchSlice";
+import addVendorReducer from "./VendorSlice/vendorSlice";
+import deleteProductReducer from "./DeleteProductSlice/deleteProductSlice";
+import signUpReducer from "./AuthSlice/SignUpSlice/signUpSlice";
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +11,7 @@ export const store = configureStore({
     search: searchProductReducer,
     vendorsList: addVendorReducer,
     delete: deleteProductReducer,
-    signUp:signUpReducer
+    signUp: signUpReducer,
   },
 });
 

@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import Button from "../Button/Button";
 import { TableProps } from "./Table.inteface";
-import { searchItem } from "../../store/productSearchSlice/productSearchSlice";
-import AddProduct from "../../modals/addProductModal";
+import { searchItem } from "../../store/ProductSearchSlice/productSearchSlice";
+import AddProduct from "../../modals/AddProductModal";
 import { Filter } from "../FilterComponent/FilterItems";
-import AddVendor from "../../modals/addSupplierModal";
+import AddVendor from "../../modals/AddSupplierModal";
 
 const Table: React.FC<TableProps> = ({
   tableName,
@@ -35,7 +35,7 @@ const Table: React.FC<TableProps> = ({
     )
   );
 
-  
+
 
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
   const paginatedData = filteredData.slice(
@@ -76,7 +76,7 @@ const Table: React.FC<TableProps> = ({
                   onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
                     setFilter(e.target.value)
                   }
-                  options={["In- stock","Out of stock", "Low stock"]}
+                  options={["In- stock", "Out of stock", "Low stock"]}
                   placeholder="Filters"
                 />
               ) : (
@@ -86,7 +86,7 @@ const Table: React.FC<TableProps> = ({
                   onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
                     setFilter(e.target.value)
                   }
-                  options={["Taking Return","Not Taking Return"]}
+                  options={["Taking Return", "Not Taking Return"]}
                   placeholder="Filters"
                 />
               )}
